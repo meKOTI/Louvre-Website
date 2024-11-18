@@ -1,0 +1,685 @@
+html, body {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    overflow-y: scroll;
+    background: url("images/tloindex.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.background2 {
+    z-index: -1;
+    width: 82%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    position: fixed;
+    left: 50%;
+    padding: none;
+    transform: translate(-50%, 0); 
+    border-left: 2px solid rgb(40, 0, 0);  
+    border-right: 2px solid rgb(40, 0, 0);
+}
+.log form, .sign form, nav {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.kotwica {
+    height: 100px;
+    clear: both;
+}
+.przerwa {
+    height: 50px;
+    clear: both;
+}
+.przerwa-f {
+    height: 150px;
+    clear: both;
+}
+
+/* SCROLLBAR */
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: rgb(31, 42, 43);
+}
+
+/* NAWIGACJA */
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    z-index: 100000;
+}
+nav p {
+    margin: 0;
+    color: white;
+    font-size: 23px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(5%, -50%);
+    margin: none;
+}
+a.logo {
+    content: url(images/louvre\ logo.webp);
+    width: 210px;
+    position: absolute;
+    top: 50%;
+    left: 1.5%;
+    transform: translate(0, -50%);
+    animation: logo 2.4s linear;
+}
+@keyframes logo 
+{
+    0%{left: 50%;transform: translate(-50%, -50%);}
+    100%{left: 1.5%;transform: translate(0, -50%);}
+}
+a.login {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-20%, -50%);
+}
+a.login:hover {
+    animation: login 2s linear 0.5s infinite normal none;
+}
+@keyframes login
+{
+    0% {box-shadow: none; text-shadow: none; border: 2px solid white;}
+    50% {box-shadow: 0 0 20px rgb(200, 225, 235); text-shadow: 2px 1px rgba(255, 255, 255, 0.6); border: 2px solid rgb(78, 188, 232);}
+    60% {box-shadow: 0 0 20px rgb(200, 225, 234); text-shadow: 2px 1px rgba(255, 255, 255, 0.6); border: 2px solid rgb(79, 182, 223);}
+    100% {box-shadow: none; text-shadow: none; border: 2px solid white;}
+}
+
+/* nav2 */
+
+.nav {
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    width: 580px;
+    position: relative;
+}
+.nav a {
+    display: block;
+    position: relative;
+    float: left;
+    padding: 50px 0 30px;
+    width: 20%;
+    text-decoration: none;
+    color: #ffffff;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -o-transition: .7s;
+    -ms-transition: .7s;
+    transition: .7s; 
+    animation: napis 2s linear;
+}
+@keyframes napis 
+{
+    0%{opacity: 0}
+    60%{opacity: 0}
+    100%{opacity: 1}
+}
+.nav a:hover {
+    color: rgb(117, 198, 230);;
+    transition: 1s;
+} 
+.effect {
+    position: absolute;
+    left: -12.5%;
+    -webkit-transition: 0.7s ease-in-out;
+    -moz-transition: 0.7s ease-in-out;
+    -o-transition: 0.7s ease-in-out;
+    -ms-transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out; 
+}
+  
+.nav a:nth-child(1):hover ~ .effect {
+    left: 10%; 
+}
+.nav a:nth-child(2):hover ~ .effect {
+    left: 30%; 
+}
+.nav a:nth-child(3):hover ~ .effect {
+    left: 50%; 
+}
+.nav a:nth-child(4):hover ~ .effect {
+    left: 70%; 
+}
+.nav a:nth-child(5):hover ~ .effect {
+    left: 90%; 
+}
+.ph-dot-nav:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    bottom: 70px;
+    z-index: 5;
+    animation: linia 2s linear;
+}
+@keyframes linia 
+{
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{opacity: 1}
+}
+.ph-dot-nav .effect {
+    width: 10px;
+    height: 10px;
+    bottom: 65px; 
+    margin-left: -5px;
+    background: rgb(132, 199, 226);
+    box-shadow: 0 0 10px 5px rgb(78, 188, 232);
+    border-radius: 100%; 
+    z-index: 10;
+    animation: kula 1s linear;
+}
+@keyframes kula
+{
+    0%{opacity: 0}
+    30%{opacity: 0}
+    100%{opacity: 1}
+}
+
+/* pojawianie */
+
+.reveal1 {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+  
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 82%;
+    z-index: 1;
+}
+
+/* start */
+
+.info {
+    height: 500px;
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    border: 1px solid black;
+}
+.one-info , .two-info {
+    width: 50%;
+    float: left;
+    height: 500px;
+}
+.otwarte {
+    margin: 0 auto;
+    width: 70%;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    background-color: black;
+    box-shadow: inset 2px -1px 10px white;
+    text-shadow: 0 0 10px rgb(255, 220, 220);
+}
+.info h2 {
+    margin-top: 30px;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.info h2 marquee {
+    font-size: 45px;
+    padding: 5px;
+}
+.one-info {
+    background-color: rgb(26, 34, 36);
+}
+.two-info {
+    background-color: rgb(78, 69, 58);
+}
+#hidden {
+    display: none;
+}
+.hours {
+    color: white;
+    font-size: 18px;
+    position: relative;
+    top: 80px;
+    left: 12%;
+}
+.hours p {
+    float: left;
+}
+.arrow {
+    position: relative;
+    left: 1%;
+}
+.hours:hover .arrow {
+    transition: 0.5s;
+    position: relative;
+    left: 3%;
+}
+.hours:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    text-shadow: 1px 1px rgb(0, 238, 255);
+}
+.plan {
+    clear: both;
+    margin: 0;
+    background-color: white;
+    position: relative;
+    left: 10%;
+    top: 90px;
+    text-align: center;
+    height: 70px;
+    width: 70%;
+}
+.plan td {
+    padding: 3px;
+    border: medium solid rgb(65, 65, 65);
+    cursor: pointer;
+}
+div.img {
+    float: left;
+    width: 74%;
+    text-align: center;
+}
+.img img {
+    height: 400px;
+    align-self: center;
+    flex: 1;
+    align-self: center;
+    padding: 50px 0;
+}
+.column-line {
+    float: left;
+    width: 13%;
+    height:500px;
+    background-color: rgb(78, 69, 58);
+    text-align: center;
+    position: relative;
+}
+.column-line div {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.25rem;
+    height: 450px;
+    box-shadow: 0 0 20px 10px skyblue;
+}
+
+/* Bilety */
+
+.bilet {
+    width: 40%;
+    background-color: rgb(26, 34, 36);
+    height: 470px;
+    float: left;
+    border: 1px solid black;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+.zdj-bilet {
+    width: 59%;
+    height: 470px;
+    float: right;
+}
+.zdj-bilet i {
+    color: gold;
+    font-size: 1800%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 5px 5px 10px black;
+}
+.ticket-table {
+    margin-top: 15px;
+    margin-left: 5%;
+    text-align: center;
+    width: 45%;
+    float:left;
+}
+.bilet h2 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    margin: 30px 0 10px 0;
+}
+.ticket-table table {
+    width:100%;
+}
+.ticket-table h3 {
+    font-size: 19px;
+    margin: 0;
+}
+.ticket-table p {
+    font-size: 14px;
+    margin: 0;
+}
+.ticket-table td {
+    border: medium solid rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(77, 74, 128);
+}
+.div-kup {
+    width: 50%;
+    float:left;
+}
+.kup a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+.nie a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+.kup {
+    text-align: center;
+    width: 50px;
+    position: relative;
+    left: 50%;
+    top: 25px;
+    transform: translate(-50%, 0);
+    font-size: 22px;
+    border: 2px solid rgb(171, 171, 171);
+    background-color: rgb(0, 255, 128);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 10px 1px rgb(105, 105, 105);
+}
+.nie {
+    text-align: center;
+    width: 50px;
+    position: relative;
+    left: 50%;
+    top: 25px;
+    transform: translate(-50%, 0);
+    font-size: 22px;
+    border: 2px solid rgb(171, 171, 171);
+    background-color: rgb(254, 0, 0);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 10px 1px rgb(105, 105, 105);
+}
+.kup:hover {
+    top: 28px;
+    box-shadow: 0 7px 1px rgb(105, 105, 105);
+    transition: 0.1s;
+}
+.nie:hover {
+    top: 28px;
+    box-shadow: 0 7px 1px rgb(105, 105, 105);
+    transition: 0.1s;
+}
+.duzo {
+    color: white;
+    clear: both;
+    position: relative;
+    left: 5%;
+    text-align: center;
+    width: 45%;
+    font-size: 33px;
+}
+
+/* Kolekcje */
+
+.kolekcje {
+    height: 480px;
+    width: 99.9%;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    border: 1px solid black;
+}
+.info-kol {
+    background-color: black;
+    height: 480px;
+    width: 50%;
+    float: left;
+}
+.slider {
+    background-color: rgb(26, 34, 36);
+    height: 480px;
+    width: 50%;
+    float: left;
+}
+.slide {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.info-kol h2 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    margin: 30px 0 60px 0;
+}
+.info-kol ul li {
+    color: white;
+    margin-top: 20px;
+}
+
+/* Galeria */
+
+.galeria {
+    background-color: rgb(250, 238, 222);
+    border: 1px solid black;
+    height: 670px;
+}
+.galeria h2 {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px 0 10px 0;
+    padding: 0;
+}
+.slideshow-container {
+    box-sizing:border-box;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.first {
+    display: block;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Mapa */
+
+.mapa {
+    width: 80%;
+    margin: auto;
+    height: 500px;
+    background-color: rgb(26, 34, 36);
+}
+.mapa h2 {
+    padding-top: 15px;
+    color: white;
+}
+.mapa p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+.mapa p a {
+    text-decoration-color: red;
+    color: rgb(253, 88, 88);
+}
+.gmap {
+    margin: auto;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    right: 1px;
+    border: 2px solid rgb(40, 0, 0);
+    border-top: none;
+    margin: none;
+    width: 100%;
+    height: 170px;
+}
+
+.contact-info {
+    background-color: rgb(255, 255, 255);
+    width: 640px;
+    height: 120px;
+    margin: auto;
+}
+
+.contact-info .info{
+    height: 120px;
+    width: 105px;
+    float: left;
+    border: none;
+    box-shadow: none;
+}
+.contact-info .info i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+}
+
+.contact-info .info i:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+.last {
+    height: 50px;
+    background-color: rgb(40, 0, 0);
+    text-align: center;
+}
+.last p {
+    color: white;
+    padding-top: 15px;
+    margin: 0;
+}
